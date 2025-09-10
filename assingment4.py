@@ -1,5 +1,5 @@
 """
-### Name:
+### Name: Finlay Mitchner
 ### Assignment 4
 #### Calculation of a debt repayment with recurring payments
 This is the reverse of assignments 2 and 3
@@ -23,3 +23,26 @@ How many months will it take him to pay off the car.  How much interest has he p
 He will have paid 21711.60 in interest
 """
 
+import time
+import os
+print("Debt repayment calculator")
+time.sleep(1.5)
+os.system('cls')
+d = float(input("Enter initial debt: "))
+os.system('cls')
+r = float(input("Enter annual interest on debt: "))
+os.system('cls')
+p = float(input("Enter ammount repaid annually: "))
+os.system('cls')
+count = 0
+tpaid = 0
+while d > 0:
+    d = d+d*r
+    if d >= p:
+        tpaid = tpaid + p 
+    elif d < p:
+        tpaid = tpaid + d
+    d = d - p
+    count += 1 
+print(f"The dept will take {round(count,2)}yrs to repay. \nTotal paid: {round(tpaid,2)}")
+    

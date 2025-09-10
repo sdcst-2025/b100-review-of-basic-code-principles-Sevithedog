@@ -1,5 +1,5 @@
 """
-### Name:
+### Name: Finlay Mitchner
 ### Assignment 3
 #### Calculation of an investment with a recurring depositS
 This will be the same as assignment 2 except you must use a while loop to iterate through your years.
@@ -23,3 +23,20 @@ rate: 5%
 10 years
 final balance: 1320.68
 """
+
+import os
+import time
+print("Simple interest calculator")
+time.sleep(1.5)
+os.system('cls')
+ai = float(input("Enter annual investement: "))
+r = float(input("Enter annual interest rate: "))/100
+t = int(input("Enter time in years: "))  # type: ignore
+c = 0
+b=0
+while c <= (t-1):
+    b = b + ai
+    I = b*r
+    b = I + b
+    c += 1
+print(f"Final balance is ${round(b,2)} \nTotal interest is ${round((b-ai*t),2)}")
