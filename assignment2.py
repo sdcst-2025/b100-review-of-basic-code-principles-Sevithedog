@@ -1,4 +1,5 @@
 """
+### Name:
 ### Assignment 2
 #### Calculation of an investment with a recurring deposit
 The simple interest formula only works if the principal or initial investment is not touched.  If an amount is added to the principal every year, then the interest must be calculated and added along with the future deposit to determine the starting balance at the beginning of the next year.

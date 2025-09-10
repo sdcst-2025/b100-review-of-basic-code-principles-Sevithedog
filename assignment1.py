@@ -1,4 +1,5 @@
 """
+### Name:
 ### Assignment 1
 #### Calculation of Simple Interest
 The simple interest formula is I = P*r*t where I = the amount of interest, P is the principal or the amount invested, r is the interest rate per year (converted to a decimal) and t is the length of time in years.
