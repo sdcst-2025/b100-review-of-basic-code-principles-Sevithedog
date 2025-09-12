@@ -30,12 +30,13 @@ time.sleep(1.5)
 os.system('cls')
 d = float(input("Enter initial debt: "))
 os.system('cls')
-r = float(input("Enter annual interest on debt: "))
+r = float(input("Enter annual interest on debt as a percent: "))/100
 os.system('cls')
 p = float(input("Enter ammount repaid annually: "))
 os.system('cls')
 count = 0
 tpaid = 0
+d0 = d
 while d > 0:
     d = d+d*r
     if d >= p:
@@ -44,5 +45,5 @@ while d > 0:
         tpaid = tpaid + d
     d = d - p
     count += 1 
-print(f"The dept will take {round(count,2)}yrs to repay. \nTotal paid: {round(tpaid,2)}")
+print(f"The dept will take {round(count,2)}yrs to repay. \nTotal paid: {round(tpaid,2)} \nInterest paid: {round(tpaid-d0,2)}")
     
