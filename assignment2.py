@@ -1,5 +1,5 @@
 """
-### Name:
+### Name: Finlay Mitchner
 ### Assignment 2
 #### Calculation of an investment with a recurring deposit
 The simple interest formula only works if the principal or initial investment is not touched.  If an amount is added to the principal every year, then the interest must be calculated and added along with the future deposit to determine the starting balance at the beginning of the next year.
@@ -24,3 +24,21 @@ final balance: 1320.68
 
 """
 
+import time
+import os
+print("Reccuring simple interest calculator")
+time.sleep(1.5)
+os.system('cls')
+ai = float(input("Enter annual investement: "))
+os.system('cls')
+r = float(input("Enter annual interest rate as a percent: "))/100
+os.system('cls')
+t = int(input("Enter time in years: ")) # type: ignore
+print(t)
+os.system('cls')
+b = 0
+for j in range(0,t):
+    b = b + ai
+    I = b*r
+    b = I + b
+print(f"Final balance is ${round(b,2)} \nTotal interest is ${round((b-ai*t),2)}")
